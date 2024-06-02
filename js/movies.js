@@ -74,10 +74,12 @@ const movies = [
 const movieName = document.querySelector("#movieInfo span:nth-child(1)");
 const movieDate = document.querySelector("#movieInfo span:nth-child(2)");
 const movieGrade = document.querySelector("#movieInfo span:nth-child(3)");
+const movieIntroduction = document.querySelector("#movieInfo span:nth-child(5)");
 const movieImg = document.querySelector("#movieImg img");
 const todaysMovie = movies[Math.floor(Math.random() * movies.length)];
 
 movieName.innerText = `${todaysMovie.movieName}`
-movieDate.innerText = `${todaysMovie.movieReleaseDate}`
-movieGrade.innerText = `${todaysMovie.movieGrade}`
+movieDate.innerText = `개봉일: ${todaysMovie.movieReleaseDate}`
+movieGrade.innerText = `평점: ★ ${todaysMovie.movieGrade}`
+movieIntroduction.innerText = `${todaysMovie.movieIntroduction}`
 movieImg.src = `./styles/img/movieImg/${todaysMovie.moviePath}`;
