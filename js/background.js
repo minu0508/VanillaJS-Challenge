@@ -7,6 +7,6 @@ const imgName = [
 ];
 
 const bgImage = imgName[Math.floor(Math.random() * imgName.length)]
-const bgImagePath = `url(../styles/img/bgImg/${bgImage})`;
+const bgImagePath = `url(./styles/img/bgImg/${bgImage})`;
 
 document.body.style.background = bgImagePath;

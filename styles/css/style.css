@@ -35,6 +35,28 @@
 /* ========================== */
 /* =       Content CSS      = */
 /* ========================== */
+#login-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 30px;
+}
+
+#submitName {
+    color: white;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px solid white;
+    font-size: 15px;
+}
+
+
 .wrap {
     display: flex;
     flex-direction: row;
@@ -75,7 +97,7 @@
 .todo-input {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding-top: 10px;
 }
@@ -115,6 +137,40 @@
     border-top-right-radius: 15px;
 }
 
+.essentialTodo {
+    margin-top: 10px;
+}
+
+.essentialTodo span {
+    display:inline-block;
+    width: 450px;
+    margin-left: 10px;
+}
+
+.essentialTodo button {
+    background: none;
+    position: relative;
+    border: none;
+    color: white;
+}
+
+.todoAllList {
+    margin-top: 10px;
+}
+
+.todoAllList span {
+    display:inline-block;
+    width: 400px;
+    margin-left: 10px;
+}
+
+.todoAllList button {
+    background: none;
+    position: relative;
+    border: none;
+    color: white;
+}
+
 .movieSuggestion {
     width: 500px;
     height: 315px;
@@ -132,15 +188,49 @@
     padding-right: 30px;
 }
 
+img {
+    border-radius: 15px;
+}
+
 #movieInfo {
     display: flex;
     flex-direction: column;
+}
+
+#movieInfo span:first-child {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#movieInfo span:nth-child(2) {
+    margin-top: 10px;
+}
+#movieInfo span:nth-child(3) {
+    margin-top: 10px;
+}
+#movieInfo span:nth-child(4) {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+#movieInfo span:nth-child(5) {
+    font-size: 13px;
+    margin: 0px;
+}
+
+#movieInfo span:last-child {
+    font-size: 9px;
+    margin-top: 5px;
 }
 
 .hidden {
     display: none;
 }
 
+.flex {
+    display: flex;
+}
 
 /* ========================== */
 /* =       FOOTER CSS       = */
@@ -158,11 +248,12 @@
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    width: 1200px;
+    width: 1312px;
     height: 55px;
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.5);
+    gap: 5px;
 }
 
 .footerWrap.quote {

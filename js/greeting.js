@@ -23,15 +23,15 @@
 // <-- [input:submit 사용해서 하는 방법] -->
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const link = document.querySelector("a");
 const greeting = document.querySelector("#greeting");
+const contentWrap = document.querySelector("#contentWrap");
 
 const HIDDEN_CLASSNAME = "hidden";
+const FlEX_CLASSNAME = "flex";
 const USERNAME_KEY = "username"
 
 function onLoginSubmit(event) {
-    event.preventDefault();
-    loginForm.classList.add(HIDDEN_CLASSNAME);
+    // event.preventDefault();
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(savedUsername);
@@ -39,7 +39,10 @@ function onLoginSubmit(event) {
 
 function paintGreetings(username) {
     greeting.innerText = `Welcome, ${username}`;
+    loginForm.classList.remove(FlEX_CLASSNAME);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    contentWrap.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);

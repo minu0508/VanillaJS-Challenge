@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=dege"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/css/style.css">
+    <link rel="stylesheet" href="./styles/css/style.css">
     <title>Momentum App</title>
 </head>
 <body>
@@ -28,18 +28,18 @@
     </div>
 
     <!-- Contents Part -->
-    <div class="wrap" id="contentWrap">
-        <form class="user hidden" id="login-form">
-            <input  
-            required maxlength="15"
-            type="text" 
-            name="" 
-            id="" 
-            placeholder="What is your name?" 
-            />
-            <input type="submit" value="Log In" />
-        </form>
-        
+    <form class="flex" id="login-form">
+        <input  
+        required maxlength="15"
+        type="text" 
+        name="" 
+        id="input-work" 
+        placeholder="What is your name?" 
+        />
+        <input type="submit" value="Log In" id="submitName" />
+    </form>
+
+    <div class="wrap hidden" id="contentWrap">    
         <div class="user-todo">
             <div class="wrap user">
                 <h1 id="greeting" class="hidden"></h1>         
@@ -50,15 +50,19 @@
                 <hr />
                 <div class="todo-input">
                     <form id="todo-form">
-                        <input id="input-work" type="text" placeholder="오늘의 할 일은?" maxlength="23" required />
+                        <input id="input-work" type="text" placeholder="오늘의 할 일을 적어주세요." maxlength="23" required />
                     </form>
-                    <ul id="todo-list"></ul>
+                </div>
+                <div class="todoAllList">
+                    <div id="todo-list"></div>
                 </div>
             </div>
         </div>
+
         <div class="additionList">
             <div class="additionList essentialTodo">
                 <h4>중요한 일</h4>
+                <div id="impToDo-list"></div>
             </div>
             <div class="movieSuggestion">
                 <h4>추천 영화</h4>
@@ -70,6 +74,9 @@
                         <span></span>
                         <span></span>
                         <span></span>
+                        <span>[소개]</span>
+                        <span></span>
+                        <span>소개 출처: 나무위키</span>
                     </div>
                 </div>
             </div>
@@ -85,12 +92,12 @@
     </footer>
 
     <!-- JavaScript Src -->
-    <script src="../js/clock.js"></script>
-    <script src="../js/greeting.js"></script>
-    <script src="../js/quotes.js"></script>
-    <script src="../js/background.js"></script>
-    <script src="../js/todo.js"></script>
-    <script src="../js/weather.js"></script>
-    <script src="../js/movies.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/greeting.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/movies.js"></script>
 </body>
 </html>
