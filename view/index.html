@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=dege"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="topNavBar">
+        <h2 id="clock" class="topNavBar clock">00:00</h2>
+        <a href="https://nomadcoders.co/">
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="M22.017,5.831l-1.017-.686V1.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v2.97L14.517,.77c-1.529-1.032-3.506-1.031-5.033,0L1.983,5.831c-1.242,.837-1.983,2.232-1.983,3.73v9.939c0,2.481,2.019,4.5,4.5,4.5h3c.276,0,.5-.224,.5-.5V14.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v9c0,.276,.224,.5,.5,.5h3c2.481,0,4.5-2.019,4.5-4.5V9.561c0-1.499-.741-2.893-1.983-3.73Zm.983,13.669c0,1.93-1.57,3.5-3.5,3.5h-2.5V14.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v8.5h-2.5c-1.93,0-3.5-1.57-3.5-3.5V9.561c0-1.166,.576-2.25,1.542-2.901L10.042,1.599c1.189-.803,2.727-.803,3.916,0l7.5,5.061c.966,.651,1.542,1.736,1.542,2.901v9.939Z"/></svg>
+        </a>
+        <div id="weather" class="topNavBar weather">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="20" height="20">
+                <g id="_01_align_center">
+                    <path d="M255.104,512.171l-14.871-12.747C219.732,482.258,40.725,327.661,40.725,214.577c0-118.398,95.981-214.379,214.379-214.379   s214.379,95.981,214.379,214.379c0,113.085-179.007,267.682-199.423,284.932L255.104,512.171z M255.104,46.553   c-92.753,0.105-167.918,75.27-168.023,168.023c0,71.042,110.132,184.53,168.023,236.473   c57.892-51.964,168.023-165.517,168.023-236.473C423.022,121.823,347.858,46.659,255.104,46.553z"/>
+                    <path d="M255.104,299.555c-46.932,0-84.978-38.046-84.978-84.978s38.046-84.978,84.978-84.978s84.978,38.046,84.978,84.978   S302.037,299.555,255.104,299.555z M255.104,172.087c-23.466,0-42.489,19.023-42.489,42.489s19.023,42.489,42.489,42.489   s42.489-19.023,42.489-42.489S278.571,172.087,255.104,172.087z"/>
+                </g>
+            </svg>
+            <span></span>
+            <img class="weatherIcon" alt=""/>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Contents Part -->
+    <div class="wrap" id="contentWrap">
+        <form class="user hidden" id="login-form">
+            <input  
+            required maxlength="15"
+            type="text" 
+            name="" 
+            id="" 
+            placeholder="What is your name?" 
+            />
+            <input type="submit" value="Log In" />
+        </form>
+        
+        <div class="user-todo">
+            <div class="wrap user">
+                <h1 id="greeting" class="hidden"></h1>         
+            </div>
+            
+            <div class="todo">
+                <h4>해야할 일</h4>
+                <hr />
+                <div class="todo-input">
+                    <form id="todo-form">
+                        <input id="input-work" type="text" placeholder="오늘의 할 일은?" maxlength="23" required />
+                    </form>
+                    <ul id="todo-list"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="additionList">
+            <div class="additionList essentialTodo">
+                <h4>중요한 일</h4>
+            </div>
+            <div class="movieSuggestion">
+                <h4>추천 영화</h4>
+                <div class="movieWrap">
+                    <div id="movieImg">
+                        <img />
+                    </div>
+                    <div id="movieInfo">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footerWrap">
+        <div id="quote" class="footerWrap quote">
+            <span></span>
+            <span></span>
+        </div>
+    </footer>
+
+    <!-- JavaScript Src -->
+    <script src="../js/clock.js"></script>
+    <script src="../js/greeting.js"></script>
+    <script src="../js/quotes.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/todo.js"></script>
+    <script src="../js/weather.js"></script>
+    <script src="../js/movies.js"></script>
+</body>
+</html>
